@@ -1,38 +1,106 @@
 $std-margin: 1em;
+$std-text-size: 20px;
+$std-border-width: 2px;
+$std-border-radius: 4px;
+$header-limit: 950px;
+$color-theme: #6666ff;
+$color-theme-sec: blue;
+$color-border: black;
+$category-padding: 2px 4px 2px 4px;
+$category-margin: 2px 2px 2px 2px;
 
 * {
     font-family: sans-serif;
+    text-decoration: none;
+    border-radius: $std-border-radius;
+}
+
+a {
+    color: $color-theme;
+}
+
+a:hover {
+    color: $color-theme-sec;
 }
 
 .rss {
-    border-width: 2px;
-    border-color: black;
+    border-width: $std-border-width;
+    border-color: $color-border;
     border-style: solid;
     margin: $std-margin;
     .rss-header {
         margin: $std-margin;
-        .rss-image {
-            display: inline;
-            text-align: start;
+        display: flex;
+        align-items: center;
+        font-size: $std-text-size;
+        .left-hd {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            .rss-image {
+                margin: $std-margin;
+                display: inline;
+            }
+            .rss-title {
+                display: inline;
+                text-align: center;
+            }
         }
-        .rss-title {
-            display: inline;
-            text-align: center;
-        }
-        .rss-date {
-            display: inline;
-            text-align: end;
+        .right-hd {
+            width: 50%;
+            .rss-date {
+                text-align: end;
+            }
         }
     }
     .rss-body {
-        .rss-news{
-            border-width: 2px;
-            border-color: black;
-            border-style: solid;
+        .rss-news {
+            border-width: $std-border-width;
+            border-color: $color-border;
+            border-style: dotted;
             margin: $std-margin;
-            h1, p, .new-date {
-                margin: $std-margin; 
+            h1 {
+                font-size: $std-text-size * 1.2;
+                text-transform: uppercase;
             }
+            h1,
+            p,
+            .new-date,
+            .cats {
+                margin: $std-margin;
+            }
+            .new-date {
+                text-align: end;
+            }
+            .new-categories {
+                margin: $category-margin;
+                display: inline-block;
+                width: fit-content;
+                padding: $category-padding;
+                
+                background-color: $color-theme;
+                a {
+                    color: white;
+                }
+            }
+            .new-categories:hover {
+                background-color: $color-theme-sec;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $header-limit) {
+    .rss .rss-header {
+        flex-flow: wrap;
+    }
+    .rss .rss-header .left-hd {
+        width: $header-limit;
+    }
+    .rss .rss-header .right-hd {
+        width: $header-limit;
+        .rss-date {
+            text-align: center;
         }
     }
 }

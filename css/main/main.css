@@ -1,5 +1,13 @@
 * {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  text-decoration: none;
+  border-radius: 4px; }
+
+a {
+  color: #6666ff; }
+
+a:hover {
+  color: blue; }
 
 .rss {
   border-width: 2px;
@@ -7,20 +15,56 @@
   border-style: solid;
   margin: 1em; }
   .rss .rss-header {
-    margin: 1em; }
-    .rss .rss-header .rss-image {
-      display: inline;
-      text-align: start; }
-    .rss .rss-header .rss-title {
-      display: inline;
-      text-align: center; }
-    .rss .rss-header .rss-date {
-      display: inline;
-      text-align: end; }
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    font-size: 20px; }
+    .rss .rss-header .left-hd {
+      display: flex;
+      align-items: center;
+      width: 50%; }
+      .rss .rss-header .left-hd .rss-image {
+        margin: 1em;
+        display: inline; }
+      .rss .rss-header .left-hd .rss-title {
+        display: inline;
+        text-align: center; }
+    .rss .rss-header .right-hd {
+      width: 50%; }
+      .rss .rss-header .right-hd .rss-date {
+        text-align: end; }
   .rss .rss-body .rss-news {
     border-width: 2px;
     border-color: black;
-    border-style: solid;
+    border-style: dotted;
     margin: 1em; }
-    .rss .rss-body .rss-news h1, .rss .rss-body .rss-news p, .rss .rss-body .rss-news .new-date {
+    .rss .rss-body .rss-news h1 {
+      font-size: 24px;
+      text-transform: uppercase; }
+    .rss .rss-body .rss-news h1,
+    .rss .rss-body .rss-news p,
+    .rss .rss-body .rss-news .new-date,
+    .rss .rss-body .rss-news .cats {
       margin: 1em; }
+    .rss .rss-body .rss-news .new-date {
+      text-align: end; }
+    .rss .rss-body .rss-news .new-categories {
+      margin: 2px 2px 2px 2px;
+      display: inline-block;
+      width: fit-content;
+      padding: 2px 4px 2px 4px;
+      background-color: #6666ff; }
+      .rss .rss-body .rss-news .new-categories a {
+        color: white; }
+    .rss .rss-body .rss-news .new-categories:hover {
+      background-color: blue; }
+
+@media screen and (max-width: 950px) {
+  .rss .rss-header {
+    flex-flow: wrap; }
+  .rss .rss-header .left-hd {
+    width: 950px; }
+  .rss .rss-header .right-hd {
+    width: 950px; }
+    .rss .rss-header .right-hd .rss-date {
+      text-align: center; } }
