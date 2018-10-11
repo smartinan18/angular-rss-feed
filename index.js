@@ -23,5 +23,6 @@ function FeedCtrl($http) {
         vm.xml = response.data
         var x2js = new X2JS()
         vm.items = x2js.xml_str2json(vm.xml)
+        console.log(vm.items)
     }
 }    
