@@ -1,0 +1,15 @@
+{
+  "name": "rss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "angular": "1.7.5",
+    "ng-sanitize": "^0.0.2"
+  }
+}

@@ -1,0 +1,26 @@
+* {
+  font-family: sans-serif; }
+
+.rss {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin: 1em; }
+  .rss .rss-header {
+    margin: 1em; }
+    .rss .rss-header .rss-image {
+      display: inline;
+      text-align: start; }
+    .rss .rss-header .rss-title {
+      display: inline;
+      text-align: center; }
+    .rss .rss-header .rss-date {
+      display: inline;
+      text-align: end; }
+  .rss .rss-body .rss-news {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    margin: 1em; }
+    .rss .rss-body .rss-news h1, .rss .rss-body .rss-news p, .rss .rss-body .rss-news .new-date {
+      margin: 1em; }

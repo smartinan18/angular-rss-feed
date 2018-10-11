@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RSS TEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main/main.css" />
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/ng-sanitize/index.js"></script>
+    <script src="xml2json.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div ng-app="RSSFeedApp" ng-controller="FeedCtrl as vm">
+        <div class="rss">
+            <div class="rss-header">
+                <img class="rss-image" ng-src="{{vm.items.rss.channel.image.url}}" />
+                <div class="rss-title">&nbsp; {{vm.items.rss.channel.title}}</div>
+                <div class="rss-date">&nbsp; {{vm.items.rss.channel.pubDate}}</div>
+            </div>
+            <div class="rss-body">
+                <div class="rss-news" ng-repeat="item in vm.items.rss.channel.item">
+                    <h1><a href="{{item.link}}">{{item.title}}</a></h5>
+                    <p>{{item.description}}</p>
+                    <div class="new-date">{{item.pubDate}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

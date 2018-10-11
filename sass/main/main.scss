@@ -1,0 +1,38 @@
+$std-margin: 1em;
+
+* {
+    font-family: sans-serif;
+}
+
+.rss {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    margin: $std-margin;
+    .rss-header {
+        margin: $std-margin;
+        .rss-image {
+            display: inline;
+            text-align: start;
+        }
+        .rss-title {
+            display: inline;
+            text-align: center;
+        }
+        .rss-date {
+            display: inline;
+            text-align: end;
+        }
+    }
+    .rss-body {
+        .rss-news{
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+            margin: $std-margin;
+            h1, p, .new-date {
+                margin: $std-margin; 
+            }
+        }
+    }
+}
