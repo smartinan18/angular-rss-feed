@@ -1,0 +1,24 @@
+<div class="rss" ng-model="vm.xmlUrl">
+    <div class="rss-header">
+        <div class="left-hd">
+            <img class="rss-image" ng-src="{{vm.items.rss.channel.image.url}}" />
+            <span class="rss-title">{{vm.items.rss.channel.title}}</span>
+        </div>
+        <div class="right-hd">
+            <div class="rss-date">{{vm.items.rss.channel.pubDate | date : fullDate}}</div>
+        </div>
+    </div>
+    <div class="rss-body">
+        <div class="rss-news" ng-repeat="item in vm.items.rss.channel.item">
+            <h1><a href="{{item.link}}">{{item.title}}</a></h1>
+            <p ng-bind-html="item.description"></p>
+            <div class="cats" ng-if="item.category">
+                Categorias:
+                <div class="new-categories" ng-repeat="category in item.category">
+                    <a href="{{category._domain}}">{{category}}</a>
+                </div>
+            </div>
+            <div class="new-date">{{item.pubDate}}</div>
+        </div>
+    </div>
+</div>

@@ -35,6 +35,11 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+angular-sanitize@1.7.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.7.4.tgz#c7d80176ed31507fd0e08bbb3a6c25bf09db2a61"
+  integrity sha512-i5NoK6lo21N/CDRtkXpUuqaXeyncP7icLNCGzCUCD6CQvfVh3nY9Nsiw+tHtiIeD34ppcbl5Wb6ihY7RKDoDVw==
+
 angular@1.7.5:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.5.tgz#d1c1c01c6f5dc835638f3f9aa51012857bdac49e"
@@ -2380,11 +2385,6 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
   integrity sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
-
-ng-sanitize@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/ng-sanitize/-/ng-sanitize-0.0.2.tgz#9b574d96e34f0e5af5b65f55cd7577bd9ff9a2a7"
-  integrity sha1-m1dNluNPDlr1tl9VzXV3vZ/5oqc=
 
 node-gyp@^3.8.0:
   version "3.8.0"
