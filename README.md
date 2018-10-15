@@ -21,6 +21,14 @@ Una vez tengas ya todo listo, escribe donde quieras usar el lector en tu archivo
 `<rss-news xml="ruta/al/fichero.xml"/>
 `
 
+### Nota
+
+Solo se puede usar este componente abriendo index.html desde un servidor web. De no hacerlo asi, se mostrará un aviso en la consola del navegador como este: 
+
+`Failed to load file:///ruta/al/rss-news.html: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.`
+
+Usa un servidor web para que este error no se produzca (por ejemplo, `browser-sync` con `gulp`)
+
 ## Licencia
 
 Este proyecto usa la licencia MIT. Para más información, lee el fichero [LICENSE](LICENSE).
